@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MasterTech</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="main-content">
+      <header>
+        <div class="logo-box">
+          <img src="https://cdn.glitch.com/b902ac32-b733-4369-b8b4-baf6cd50b315%2Fa162bf27-b7ff-4870-ac25-cde1c846f27b_200x200.png?v=1615506199223" 
+               alt="MasterTech logo"></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="build.html">Build Your PC</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+      <div>
+        
+      
+      <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="question-1">
+            <h3>How long should it take to build my PC?</h3>
+            <p>Typically it should take a week to build your computer and around 3-5 business
+              days to ship it to you depending on your location.</p>
+            <img class="question-1-img" src="https://cdn.glitch.com/b902ac32-b733-4369-b8b4-baf6cd50b315%2F22264062445_2574e2da59_b.jpg?v=1615604387311" alt="Picture of computer">
+          </div>
+        
+      
+          <div class="question-2">
+            <h3>Is there a warranty?</h3>
+            <p>We provide a lifetime warranty on your PC. This covers parts and components that 
+              malfunction or stop working for any reason. This does not cover damage that may be caused from dropping or misuse. </p>
+            <img src="https://cdn.glitch.com/b902ac32-b733-4369-b8b4-baf6cd50b315%2Fkeyboard-1235105_1280.jpg?v=1614304355427" alt="Picture of a keyboard">
+          </div>
+      
+          <div class="question-3"> 
+            <h3>What do all these parts mean?</h3>
+            <p>A processor is like the brain of the computer, it thinks and processes information. RAM is memory that is used to run applications.
+            This could be compared to short term memory. Next is storage, this is where you will put all your files. This could 
+            be like long term memory. Lastly a graphics card is a seperate component that processes video data and this could be compared
+            to your eyes.</p>
+            <img src="https://cdn.glitch.com/b902ac32-b733-4369-b8b4-baf6cd50b315%2F30333947748_2dfede5e26_b.jpg?v=1615604526818" alt="Picture of gamer">
+          </div>
+      
+          <div class="question-4">
+            <h3>Why get a gaming PC when there are already consoles?</h3>
+            <p>Consoles are awesome, but they aren't for everyone. Some want more power, speed, and quality in their games.
+            While consoles do offer this, they are bottlenecked and have a limit. With computers the limit is based on 
+            the components you have in your computer. If you want your games to run better, you can simply upgrade 
+            your computer! There are also some exclusive games that are only found on PC. Lastly playing on keyboard and
+            mouse is better for game control. </p>
+            <img src="https://cdn.glitch.com/b902ac32-b733-4369-b8b4-baf6cd50b315%2F30324073738_7620c6fee2_b.jpg?v=1615604526885" alt="Picture of Fifa 19 on screen">
+          </div>
+      </div>
+      
+        <div class="faq-form">
+          <h3>Ask your own question!</h3>
+          <div id="feedback"></div>
+            <form action="/my-handling-form-page" method="post">
+            <ul>
+              <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+              </li>
+              <li>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="user_email">
+              </li>
+              <li>
+                <label for="msg">Question:</label>
+                <textarea id="msg" name="user_message"></textarea>
+              </li>
+              <li class="button">
+                <button type="submit">Send your message</button>
+              </li>
+           </ul>
+    </form>
+    <script>
+      // get the feedback div element so we can do something with it.
+      const feedbackElement = document.getElementById('feedback');
+      // get the form so we can read what was entered in it.
+      const formElement = document.forms[0];
+      // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+      formElement.addEventListener('submit', function(e) {
+      // stop the form from doing the default action
+      e.preventDefault();
+      // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+      feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+      // make the feedback element visible.
+      feedbackElement.style.display = "block";
+      // add a class to move everything down so our message doesn't cover it.
+      document.body.classList.toggle('moveDown');
+      });
+  </script>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="copyright">
+        &copy; 2021 Personal Site - Zach Lucas - WDD 130-01
+      </p>
+        <div class="social">
+          <a href="https://facebook.com" target="_blank">
+            <img src="https://cdn.glitch.com/b902ac32-b733-4369-b8b4-baf6cd50b315%2Ffacebook.png?v=1615524466699" alt="Facebook logo">
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <img src="https://cdn.glitch.com/b902ac32-b733-4369-b8b4-baf6cd50b315%2Finstagram.png?v=1615524466698" alt="Instagram Logo">
+          </a>
+          <a href="https://youtube.com" target="_blank">
+            <img src="https://cdn.glitch.com/b902ac32-b733-4369-b8b4-baf6cd50b315%2Fyoutube.png?v=1615524466699" alt="YouTube Logo">
+          </a>
+        </div>
+      <ul>
+        <li class="site-plan-link"><a href="site-plan.html">Site Plan</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+  
+</html>
